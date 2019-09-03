@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Card from '../Card';
-import { NewsLeft, NewsRight, TitleWrap, TitleItem, List, ListItem, More, Wrapper, ImgWrap, AbsoluteWrap, Img, Arrow,Imgbox } from './styles';
+import { NewsLeft, NewsRight, TitleWrap, TitleItem, List, ListItem, More, Wrapper, ImgWrap, AbsoluteWrap, Img, Arrow, Imgbox } from './styles';
 
 import sc1 from 'static/sc1.jpg';
 import sc2 from 'static/sc2.jpg';
@@ -42,39 +42,39 @@ const sliderimg = [
 const News = () => {
     const [show, setShow] = useState('0');
     const [left, setLeft] = useState(-3);
-    return(
+    return (
         <Card>
-                <NewsLeft>
-                    <TitleWrap>
-                        {title.map((item, i) =>
-                            <TitleItem key={`${i}`} id={`${i}`} show={show} onClick={(e) => setShow(`${e.target.id}`)}>
-                                {item}
-                            </TitleItem>
-                        )}
-                    </TitleWrap>
-                    <List>
-                        {list[`${show}`].map((item, i) => <ListItem key={i}>{item}</ListItem>)}
-                        <More>更多>></More>
-                    </List>
-                </NewsLeft>
-                <NewsRight>
-                    <p>便捷服务</p>
-                    <Wrapper>
-                        <Arrow onClick={() => { if (left !== -6) { setLeft(left - 1) } return }}>&lt;</Arrow>
-                        <ImgWrap>
-                            <AbsoluteWrap style={{ left: `${left * 0.8}rem` }}>
-                                {sliderimg.map((item,i)=>
-                                    <Imgbox key={i}>
-                                        <Img src={item.src} />
-                                        <p>{item.name}</p>
-                                    </Imgbox>
-                                    )}
-                            </AbsoluteWrap>
-                        </ImgWrap>
-                        <Arrow onClick={() => { if (left !== 0) { setLeft(left + 1) } return }}>&gt;</Arrow>
-                    </Wrapper>
-                </NewsRight>
-            </Card>
+            <NewsLeft>
+                <TitleWrap>
+                    {title.map((item, i) =>
+                        <TitleItem key={`${i}`} id={`${i}`} show={show} onClick={(e) => setShow(`${e.target.id}`)}>
+                            {item}
+                        </TitleItem>
+                    )}
+                </TitleWrap>
+                <List>
+                    {list[`${show}`].map((item, i) => <ListItem key={i}>{item}</ListItem>)}
+                    <More>更多>></More>
+                </List>
+            </NewsLeft>
+            <NewsRight>
+                <p>便捷服务</p>
+                <Wrapper>
+                    <Arrow onClick={() => { if (left !== -6) setLeft(left - 1) }}>&lt;</Arrow>
+                    <ImgWrap>
+                        <AbsoluteWrap style={{ left: `${left * 0.8}rem` }}>
+                            {sliderimg.map((item, i) =>
+                                <Imgbox key={i}>
+                                    <Img src={item.src} />
+                                    <p>{item.name}</p>
+                                </Imgbox>
+                            )}
+                        </AbsoluteWrap>
+                    </ImgWrap>
+                    <Arrow onClick={() => { if (left !== 0) setLeft(left + 1) }}>&gt;</Arrow>
+                </Wrapper>
+            </NewsRight>
+        </Card>
     )
 }
 export default News;

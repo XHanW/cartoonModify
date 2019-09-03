@@ -19,24 +19,24 @@ const Wrapper = styled.div`
 `;
 
 const setFontSize = (designWidth, maxWidth)  => {
-	var doc = document,
+	let doc = document,
 	win = window,
 	docEl = doc.documentElement,
 	remStyle = document.createElement("style"),
 	tid;
 
 	function refreshRem() {
-		var width = docEl.getBoundingClientRect().width;
+		let width = docEl.getBoundingClientRect().width;
 		maxWidth = maxWidth || 540;
 		width>maxWidth && (width=maxWidth);
-		var rem = width * 100 / designWidth;
+		let rem = width * 100 / designWidth;
 		remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
 	}
 
 	if (docEl.firstElementChild) {
 		docEl.firstElementChild.appendChild(remStyle);
 	} else {
-		var wrap = doc.createElement("div");
+		let wrap = doc.createElement("div");
 		wrap.appendChild(remStyle);
 		doc.write(wrap.innerHTML);
 		wrap = null;

@@ -17,7 +17,7 @@ export const MainTitle = styled.h1`
         width:95%;
         border:.01rem solid ${colorsDark.title};
         position:absolute;
-        top:.6rem;
+        top:.65rem;
         left:50%;
         z-index:666;
         transform:translateX(-50%);
