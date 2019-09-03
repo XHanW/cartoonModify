@@ -96,8 +96,8 @@ const show = keyframes`
 export const Img = styled.img`
     animation: ${show} .8s;
     margin:0 .20rem;
-    max-width:1.5rem;
-    max-height:1rem;
+    width:1.5rem;
+    height:1rem;
     display:${props => Math.abs(props.show) === props.id ? 'block' : 'none'};
 `;
 export const ListLitileWrap = styled.ul`
