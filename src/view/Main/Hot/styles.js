@@ -41,7 +41,7 @@ export const ListItem = styled.li`
     color:${colorsDark.text};
     font-size:${size.small};
     width:100%;
-    margin-bottom:.05rem;
+    margin:.05rem auto;
     cursor:pointer;
     &:hover{
         text-decoration:underline;
