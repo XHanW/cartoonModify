@@ -6,9 +6,9 @@ export const colorsDark = {
     title:'#004080',
     more:'#cc6600'
 }
-export const colorLigth = {
-    background: '#eee',
-    text: '#333',
-    textSecondry: '#004080',
-    border: '#ccc',
-}
+// export const colorLigth = {
+//     background: '#eee',
+//     text: '#333',
+//     textSecondry: '#004080',
+//     border: '#ccc',
+// }

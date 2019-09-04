@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import {colorsDark} from 'styles/paltte';
 import size from 'styles/font';
+import { tablet } from 'styles/mediaQueries';
 
 export const RightWrap = styled.div`
     position:fixed;
@@ -10,6 +11,9 @@ export const RightWrap = styled.div`
     transform:translateY(-50%);
     width:3rem;
     text-align:center;
+    ${tablet} {
+        right:0.3rem;
+    }
 `;
 export const CloseBtn = styled.div`
     position:absolute;

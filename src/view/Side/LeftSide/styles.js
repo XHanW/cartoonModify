@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import {colorsDark} from 'styles/paltte';
 import size from 'styles/font';
-import { tablet } from 'styles/mediaQueries';
 
 export const LeftWrap = styled.ul`
     position:fixed;
